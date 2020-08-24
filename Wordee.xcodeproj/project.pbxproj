@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		7518086624EEF27F00B19E34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7518086524EEF27F00B19E34 /* Assets.xcassets */; };
 		7518086924EEF27F00B19E34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7518086724EEF27F00B19E34 /* LaunchScreen.storyboard */; };
 		7518086C24EEF27F00B19E34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7518086B24EEF27F00B19E34 /* main.m */; };
+		7543A83424F1434700C94A19 /* LanguagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7543A83324F1434700C94A19 /* LanguagesViewController.m */; };
 		7599D9A424EEFCE3005AE740 /* ListNameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7599D9A224EEFCE3005AE740 /* ListNameCell.m */; };
 		7599D9A524EEFCE3005AE740 /* ListNameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7599D9A324EEFCE3005AE740 /* ListNameCell.xib */; };
 		E01090526ACA0BEC7C7265EE /* Pods_Wordee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 005A71E9E263D95ED32D14B0 /* Pods_Wordee.framework */; };
@@ -34,6 +35,9 @@
 		7518086824EEF27F00B19E34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7518086A24EEF27F00B19E34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7518086B24EEF27F00B19E34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7543A83124F1258A00C94A19 /* WordsList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordsList.h; sourceTree = "<group>"; };
+		7543A83224F1434700C94A19 /* LanguagesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LanguagesViewController.h; sourceTree = "<group>"; };
+		7543A83324F1434700C94A19 /* LanguagesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LanguagesViewController.m; sourceTree = "<group>"; };
 		7599D9A124EEFCE3005AE740 /* ListNameCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListNameCell.h; sourceTree = "<group>"; };
 		7599D9A224EEFCE3005AE740 /* ListNameCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListNameCell.m; sourceTree = "<group>"; };
 		7599D9A324EEFCE3005AE740 /* ListNameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListNameCell.xib; sourceTree = "<group>"; };
@@ -96,6 +100,9 @@
 				7518085D24EEF27E00B19E34 /* SceneDelegate.m */,
 				7518085F24EEF27E00B19E34 /* TableViewController.h */,
 				7518086024EEF27E00B19E34 /* TableViewController.m */,
+				7543A83224F1434700C94A19 /* LanguagesViewController.h */,
+				7543A83324F1434700C94A19 /* LanguagesViewController.m */,
+				7543A83024F1242A00C94A19 /* Models */,
 				7599D9A024EEFC77005AE740 /* Views */,
 				7518086524EEF27F00B19E34 /* Assets.xcassets */,
 				7518086724EEF27F00B19E34 /* LaunchScreen.storyboard */,
@@ -103,6 +110,14 @@
 				7518086B24EEF27F00B19E34 /* main.m */,
 			);
 			path = Wordee;
+			sourceTree = "<group>";
+		};
+		7543A83024F1242A00C94A19 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7543A83124F1258A00C94A19 /* WordsList.h */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		7599D9A024EEFC77005AE740 /* Views */ = {
@@ -127,6 +142,7 @@
 				7518085224EEF27E00B19E34 /* Sources */,
 				7518085324EEF27E00B19E34 /* Frameworks */,
 				7518085424EEF27E00B19E34 /* Resources */,
+				27BC1FB3F79F4FA886C1BDE2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -184,6 +200,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		27BC1FB3F79F4FA886C1BDE2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wordee/Pods-Wordee-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wordee/Pods-Wordee-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Wordee/Pods-Wordee-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FA462823F708F59569C8D11C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -215,6 +248,7 @@
 			files = (
 				7518086124EEF27E00B19E34 /* TableViewController.m in Sources */,
 				7518085B24EEF27E00B19E34 /* AppDelegate.m in Sources */,
+				7543A83424F1434700C94A19 /* LanguagesViewController.m in Sources */,
 				7518086C24EEF27F00B19E34 /* main.m in Sources */,
 				7599D9A424EEFCE3005AE740 /* ListNameCell.m in Sources */,
 				7518085E24EEF27E00B19E34 /* SceneDelegate.m in Sources */,

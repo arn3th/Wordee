@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WordsList.h"
+#import <Realm/Realm.h>
+#import "LanguagesViewController.h"
 
-@interface TableViewController : UITableViewController <UISearchBarDelegate>
+
+@interface TableViewController : UITableViewController <UISearchBarDelegate, LanguagesViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
-@property (nonatomic, retain) NSArray *listsNames;
+@property (nonatomic, retain) RLMResults<WordsList *>  *wordsLists;
+@property (atomic, retain) RLMRealm *realm;
 
 @end
 
