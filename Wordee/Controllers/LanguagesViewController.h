@@ -7,9 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Realm/Realm.h>
-
-NS_ASSUME_NONNULL_BEGIN
 
 @class LanguagesViewController;
 
@@ -20,12 +17,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LanguagesViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
 
-@property (nonatomic, weak) id <LanguagesViewControllerDelegate> delegate;
+@property (weak, nonatomic) id <LanguagesViewControllerDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UIPickerView *languagePickerBottom;
 @property (weak, nonatomic) IBOutlet UIPickerView *languagePickerTop;
 @property (weak, nonatomic) IBOutlet UIButton *addButton;
 @property (nonatomic, retain) NSArray *languages; 
 
 @end
-
-NS_ASSUME_NONNULL_END

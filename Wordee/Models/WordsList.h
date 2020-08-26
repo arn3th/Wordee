@@ -13,18 +13,22 @@
 //#endif /* WordsList_h */
 
 #import <Realm/Realm.h>
+#import "Word.h"
+
+RLM_ARRAY_TYPE(Word)
 
 @interface WordsList : RLMObject
 
 @property NSString *name;
 @property NSString *basicLanguage;
 @property NSString *learnedLanguage;
+@property RLMArray<Word *><Word> *words;
 
 @end
 
 
 @implementation WordsList
 + (NSArray *)requiredProperties {
-    return @[@"name", @"basicLanguage", @"learnedLanguage"];
+    return @[@"name", @"basicLanguage", @"learnedLanguage", @"words"];
 }
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10506BFA446A7D78EDB5ACC8 /* Pods_Wordee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9320DFEE7B4CF2EB387F169F /* Pods_Wordee.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		7518085B24EEF27E00B19E34 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7518085A24EEF27E00B19E34 /* AppDelegate.m */; };
 		7518085E24EEF27E00B19E34 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7518085D24EEF27E00B19E34 /* SceneDelegate.m */; };
 		7518086124EEF27E00B19E34 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7518086024EEF27E00B19E34 /* TableViewController.m */; };
@@ -15,14 +16,15 @@
 		7518086924EEF27F00B19E34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7518086724EEF27F00B19E34 /* LaunchScreen.storyboard */; };
 		7518086C24EEF27F00B19E34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7518086B24EEF27F00B19E34 /* main.m */; };
 		7543A83424F1434700C94A19 /* LanguagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7543A83324F1434700C94A19 /* LanguagesViewController.m */; };
+		7577884524F656C5008DDCC1 /* WordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7577884324F656C5008DDCC1 /* WordCell.m */; };
+		7577884624F656C5008DDCC1 /* WordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7577884424F656C5008DDCC1 /* WordCell.xib */; };
 		7599D9A424EEFCE3005AE740 /* ListNameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7599D9A224EEFCE3005AE740 /* ListNameCell.m */; };
 		7599D9A524EEFCE3005AE740 /* ListNameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7599D9A324EEFCE3005AE740 /* ListNameCell.xib */; };
-		E01090526ACA0BEC7C7265EE /* Pods_Wordee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 005A71E9E263D95ED32D14B0 /* Pods_Wordee.framework */; };
+		75EED8A124F5644D00A87743 /* VocabularyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EED8A024F5644D00A87743 /* VocabularyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		005A71E9E263D95ED32D14B0 /* Pods_Wordee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wordee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A52F299939E00B1B94EB437 /* Pods-Wordee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordee.release.xcconfig"; path = "Target Support Files/Pods-Wordee/Pods-Wordee.release.xcconfig"; sourceTree = "<group>"; };
+		10ECB9B1E2F1B820AA3A3F75 /* Pods-Wordee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordee.debug.xcconfig"; path = "Target Support Files/Pods-Wordee/Pods-Wordee.debug.xcconfig"; sourceTree = "<group>"; };
 		7518085624EEF27E00B19E34 /* Wordee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wordee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7518085924EEF27E00B19E34 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7518085A24EEF27E00B19E34 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -38,10 +40,17 @@
 		7543A83124F1258A00C94A19 /* WordsList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordsList.h; sourceTree = "<group>"; };
 		7543A83224F1434700C94A19 /* LanguagesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LanguagesViewController.h; sourceTree = "<group>"; };
 		7543A83324F1434700C94A19 /* LanguagesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LanguagesViewController.m; sourceTree = "<group>"; };
+		7577884224F656C5008DDCC1 /* WordCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordCell.h; sourceTree = "<group>"; };
+		7577884324F656C5008DDCC1 /* WordCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordCell.m; sourceTree = "<group>"; };
+		7577884424F656C5008DDCC1 /* WordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordCell.xib; sourceTree = "<group>"; };
 		7599D9A124EEFCE3005AE740 /* ListNameCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListNameCell.h; sourceTree = "<group>"; };
 		7599D9A224EEFCE3005AE740 /* ListNameCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListNameCell.m; sourceTree = "<group>"; };
 		7599D9A324EEFCE3005AE740 /* ListNameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListNameCell.xib; sourceTree = "<group>"; };
-		E1F0F4E44FCD4284FC3A219E /* Pods-Wordee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordee.debug.xcconfig"; path = "Target Support Files/Pods-Wordee/Pods-Wordee.debug.xcconfig"; sourceTree = "<group>"; };
+		75EED89D24F54B9F00A87743 /* Word.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Word.h; sourceTree = "<group>"; };
+		75EED89F24F5644D00A87743 /* VocabularyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VocabularyViewController.h; sourceTree = "<group>"; };
+		75EED8A024F5644D00A87743 /* VocabularyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VocabularyViewController.m; sourceTree = "<group>"; };
+		9320DFEE7B4CF2EB387F169F /* Pods_Wordee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wordee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD40BF921BA6549A955088CF /* Pods-Wordee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordee.release.xcconfig"; path = "Target Support Files/Pods-Wordee/Pods-Wordee.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,28 +58,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E01090526ACA0BEC7C7265EE /* Pods_Wordee.framework in Frameworks */,
+				10506BFA446A7D78EDB5ACC8 /* Pods_Wordee.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04F9CC0BBA4BFA545D9EB4E0 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				005A71E9E263D95ED32D14B0 /* Pods_Wordee.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		172EFD80DA4D52B7B6CD873D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E1F0F4E44FCD4284FC3A219E /* Pods-Wordee.debug.xcconfig */,
-				4A52F299939E00B1B94EB437 /* Pods-Wordee.release.xcconfig */,
+				10ECB9B1E2F1B820AA3A3F75 /* Pods-Wordee.debug.xcconfig */,
+				FD40BF921BA6549A955088CF /* Pods-Wordee.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		6EB2DC1DE7E4A0A3477BD839 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9320DFEE7B4CF2EB387F169F /* Pods_Wordee.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7518084D24EEF27E00B19E34 = {
@@ -79,7 +88,7 @@
 				7518085824EEF27E00B19E34 /* Wordee */,
 				7518085724EEF27E00B19E34 /* Products */,
 				172EFD80DA4D52B7B6CD873D /* Pods */,
-				04F9CC0BBA4BFA545D9EB4E0 /* Frameworks */,
+				6EB2DC1DE7E4A0A3477BD839 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,14 +107,10 @@
 				7518085A24EEF27E00B19E34 /* AppDelegate.m */,
 				7518085C24EEF27E00B19E34 /* SceneDelegate.h */,
 				7518085D24EEF27E00B19E34 /* SceneDelegate.m */,
-				7518085F24EEF27E00B19E34 /* TableViewController.h */,
-				7518086024EEF27E00B19E34 /* TableViewController.m */,
-				7543A83224F1434700C94A19 /* LanguagesViewController.h */,
-				7543A83324F1434700C94A19 /* LanguagesViewController.m */,
+				75EED89E24F5515100A87743 /* Controllers */,
 				7543A83024F1242A00C94A19 /* Models */,
 				7599D9A024EEFC77005AE740 /* Views */,
 				7518086524EEF27F00B19E34 /* Assets.xcassets */,
-				7518086724EEF27F00B19E34 /* LaunchScreen.storyboard */,
 				7518086A24EEF27F00B19E34 /* Info.plist */,
 				7518086B24EEF27F00B19E34 /* main.m */,
 			);
@@ -116,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				7543A83124F1258A00C94A19 /* WordsList.h */,
+				75EED89D24F54B9F00A87743 /* Word.h */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -123,12 +129,29 @@
 		7599D9A024EEFC77005AE740 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7518086224EEF27E00B19E34 /* Main.storyboard */,
 				7599D9A124EEFCE3005AE740 /* ListNameCell.h */,
 				7599D9A224EEFCE3005AE740 /* ListNameCell.m */,
 				7599D9A324EEFCE3005AE740 /* ListNameCell.xib */,
+				7577884224F656C5008DDCC1 /* WordCell.h */,
+				7577884324F656C5008DDCC1 /* WordCell.m */,
+				7577884424F656C5008DDCC1 /* WordCell.xib */,
+				7518086224EEF27E00B19E34 /* Main.storyboard */,
+				7518086724EEF27F00B19E34 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		75EED89E24F5515100A87743 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7518085F24EEF27E00B19E34 /* TableViewController.h */,
+				7518086024EEF27E00B19E34 /* TableViewController.m */,
+				7543A83224F1434700C94A19 /* LanguagesViewController.h */,
+				7543A83324F1434700C94A19 /* LanguagesViewController.m */,
+				75EED89F24F5644D00A87743 /* VocabularyViewController.h */,
+				75EED8A024F5644D00A87743 /* VocabularyViewController.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,11 +161,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7518086F24EEF27F00B19E34 /* Build configuration list for PBXNativeTarget "Wordee" */;
 			buildPhases = (
-				FA462823F708F59569C8D11C /* [CP] Check Pods Manifest.lock */,
+				3C55BDD58EC043801E21C2F8 /* [CP] Check Pods Manifest.lock */,
 				7518085224EEF27E00B19E34 /* Sources */,
 				7518085324EEF27E00B19E34 /* Frameworks */,
 				7518085424EEF27E00B19E34 /* Resources */,
-				27BC1FB3F79F4FA886C1BDE2 /* [CP] Embed Pods Frameworks */,
+				8FE864A95C9593E55E437FB5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -194,30 +217,14 @@
 				7518086624EEF27F00B19E34 /* Assets.xcassets in Resources */,
 				7599D9A524EEFCE3005AE740 /* ListNameCell.xib in Resources */,
 				7518086424EEF27E00B19E34 /* Main.storyboard in Resources */,
+				7577884624F656C5008DDCC1 /* WordCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		27BC1FB3F79F4FA886C1BDE2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Wordee/Pods-Wordee-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Wordee/Pods-Wordee-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Wordee/Pods-Wordee-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FA462823F708F59569C8D11C /* [CP] Check Pods Manifest.lock */ = {
+		3C55BDD58EC043801E21C2F8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -239,6 +246,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8FE864A95C9593E55E437FB5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wordee/Pods-Wordee-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wordee/Pods-Wordee-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Wordee/Pods-Wordee-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -246,6 +270,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75EED8A124F5644D00A87743 /* VocabularyViewController.m in Sources */,
+				7577884524F656C5008DDCC1 /* WordCell.m in Sources */,
 				7518086124EEF27E00B19E34 /* TableViewController.m in Sources */,
 				7518085B24EEF27E00B19E34 /* AppDelegate.m in Sources */,
 				7543A83424F1434700C94A19 /* LanguagesViewController.m in Sources */,
@@ -315,7 +341,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -372,7 +398,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -389,16 +415,28 @@
 		};
 		7518087024EEF27F00B19E34 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1F0F4E44FCD4284FC3A219E /* Pods-Wordee.debug.xcconfig */;
+			baseConfigurationReference = 10ECB9B1E2F1B820AA3A3F75 /* Pods-Wordee.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8546CZ9GDT;
+				GCC_NO_COMMON_BLOCKS = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = Wordee/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Realm\"",
+					"-framework",
+					"\"Security\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.awisniewski.Wordee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -408,16 +446,28 @@
 		};
 		7518087124EEF27F00B19E34 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A52F299939E00B1B94EB437 /* Pods-Wordee.release.xcconfig */;
+			baseConfigurationReference = FD40BF921BA6549A955088CF /* Pods-Wordee.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8546CZ9GDT;
+				GCC_NO_COMMON_BLOCKS = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = Wordee/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Realm\"",
+					"-framework",
+					"\"Security\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.awisniewski.Wordee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
