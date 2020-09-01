@@ -169,6 +169,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6KI-KJ-7Ig">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="662"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="seB-wL-vNI" userLabel="ButtonView">
                                 <rect key="frame" x="0.0" y="662" width="414" height="60"/>
                                 <subviews>
@@ -203,18 +207,6 @@
                                     <constraint firstAttribute="trailing" secondItem="11p-AB-hCl" secondAttribute="trailing" constant="20" id="ch9-p4-IEf"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6KI-KJ-7Ig">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="662"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0/0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FE2-rz-cCb">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" red="0.035294117649999998" green="0.1333333333" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="19"/>
-                                    <color key="textColor" red="0.89200353619999995" green="0.70298582320000003" blue="0.078403018409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.035294117649999998" green="0.1333333333" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -222,9 +214,9 @@
                             <constraint firstItem="6KI-KJ-7Ig" firstAttribute="trailing" secondItem="IkP-2g-g8t" secondAttribute="trailing" id="AIC-oK-ycF"/>
                             <constraint firstItem="6KI-KJ-7Ig" firstAttribute="leading" secondItem="IkP-2g-g8t" secondAttribute="leading" id="Bbt-AW-62C"/>
                             <constraint firstItem="seB-wL-vNI" firstAttribute="top" secondItem="6KI-KJ-7Ig" secondAttribute="bottom" id="YoE-Eo-zvv"/>
-                            <constraint firstItem="6KI-KJ-7Ig" firstAttribute="top" secondItem="ORq-ra-OhA" secondAttribute="top" id="gdK-Ea-ASk"/>
                             <constraint firstItem="seB-wL-vNI" firstAttribute="leading" secondItem="IkP-2g-g8t" secondAttribute="leading" id="kx0-BL-UU9"/>
                             <constraint firstItem="seB-wL-vNI" firstAttribute="trailing" secondItem="IkP-2g-g8t" secondAttribute="trailing" id="mcu-MG-hh6"/>
+                            <constraint firstItem="6KI-KJ-7Ig" firstAttribute="top" secondItem="IkP-2g-g8t" secondAttribute="top" id="woP-zC-x61"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IkP-2g-g8t"/>
                     </view>

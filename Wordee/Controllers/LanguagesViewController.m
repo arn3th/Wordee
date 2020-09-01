@@ -16,8 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-//    [self.languagePicker nib
     self.languagePickerTop.delegate = self;
     self.languagePickerBottom.delegate = self;
     self.addButton.layer.cornerRadius = 10;

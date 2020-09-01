@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class LanguagesViewController;
+//@class LanguagesViewController;
 
 @protocol LanguagesViewControllerDelegate <NSObject>
 - (void)didFinishCreatingWordsListWith:(NSString *)name Language:(NSString *)basic Language:(NSString *)learned;

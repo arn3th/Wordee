@@ -15,6 +15,8 @@
 		7518086624EEF27F00B19E34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7518086524EEF27F00B19E34 /* Assets.xcassets */; };
 		7518086924EEF27F00B19E34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7518086724EEF27F00B19E34 /* LaunchScreen.storyboard */; };
 		7518086C24EEF27F00B19E34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7518086B24EEF27F00B19E34 /* main.m */; };
+		75255DDA24F8FA26004A0DBD /* WordsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 75255DD924F8FA26004A0DBD /* WordsList.m */; };
+		75255DDC24F8FA6F004A0DBD /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = 75255DDB24F8FA6F004A0DBD /* Word.m */; };
 		7543A83424F1434700C94A19 /* LanguagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7543A83324F1434700C94A19 /* LanguagesViewController.m */; };
 		7577884524F656C5008DDCC1 /* WordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7577884324F656C5008DDCC1 /* WordCell.m */; };
 		7577884624F656C5008DDCC1 /* WordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7577884424F656C5008DDCC1 /* WordCell.xib */; };
@@ -37,6 +39,8 @@
 		7518086824EEF27F00B19E34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7518086A24EEF27F00B19E34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7518086B24EEF27F00B19E34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		75255DD924F8FA26004A0DBD /* WordsList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordsList.m; sourceTree = "<group>"; };
+		75255DDB24F8FA6F004A0DBD /* Word.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Word.m; sourceTree = "<group>"; };
 		7543A83124F1258A00C94A19 /* WordsList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordsList.h; sourceTree = "<group>"; };
 		7543A83224F1434700C94A19 /* LanguagesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LanguagesViewController.h; sourceTree = "<group>"; };
 		7543A83324F1434700C94A19 /* LanguagesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LanguagesViewController.m; sourceTree = "<group>"; };
@@ -121,7 +125,9 @@
 			isa = PBXGroup;
 			children = (
 				7543A83124F1258A00C94A19 /* WordsList.h */,
+				75255DD924F8FA26004A0DBD /* WordsList.m */,
 				75EED89D24F54B9F00A87743 /* Word.h */,
+				75255DDB24F8FA6F004A0DBD /* Word.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -270,10 +276,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75255DDA24F8FA26004A0DBD /* WordsList.m in Sources */,
 				75EED8A124F5644D00A87743 /* VocabularyViewController.m in Sources */,
 				7577884524F656C5008DDCC1 /* WordCell.m in Sources */,
 				7518086124EEF27E00B19E34 /* TableViewController.m in Sources */,
 				7518085B24EEF27E00B19E34 /* AppDelegate.m in Sources */,
+				75255DDC24F8FA6F004A0DBD /* Word.m in Sources */,
 				7543A83424F1434700C94A19 /* LanguagesViewController.m in Sources */,
 				7518086C24EEF27F00B19E34 /* main.m in Sources */,
 				7599D9A424EEFCE3005AE740 /* ListNameCell.m in Sources */,

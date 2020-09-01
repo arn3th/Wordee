@@ -13,6 +13,9 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.externalView.layer.masksToBounds = YES;
+    self.externalView.layer.cornerRadius = 10;
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

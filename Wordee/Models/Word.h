@@ -6,7 +6,7 @@
 //  Copyright © 2020 Artur Wiśniewski. All rights reserved.
 //
 
-//#import <Realm/Realm.h>
+#import <Realm/Realm.h>
 //#import "WordsList.h"
 
 @interface Word: RLMObject
@@ -17,14 +17,3 @@
 @end
 
 
-@implementation Word
-+ (NSArray *)requiredProperties {
-    return @[@"basicLanguageText", @"learnedLanguageText", @"parentList"];
-}
-
-//+ (NSDictionary *)linkingObjectsProperties {
-//    return @{
-//        @"parentList": [RLMPropertyDescriptor descriptorWithClass: WordsList.class propertyName:@"words"],
-//    };
-//}
-@end

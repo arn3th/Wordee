@@ -27,8 +27,3 @@ RLM_ARRAY_TYPE(Word)
 @end
 
 
-@implementation WordsList
-+ (NSArray *)requiredProperties {
-    return @[@"name", @"basicLanguage", @"learnedLanguage", @"words"];
-}
-@end

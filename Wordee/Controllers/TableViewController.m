@@ -130,9 +130,11 @@
         LanguagesViewController *destonationVC = segue.destinationViewController;
         destonationVC.delegate = self;
     } else if([segue.identifier  isEqual: @"goToVocabulary"]) {
-//        VocabularyViewController *destinationVC = segue.destinationViewController;
+        VocabularyViewController *destinationVC = segue.destinationViewController;
 //        destinationVC.vocabularyListName = self.wordsLists[self.tableView.indexPathForSelectedRow.row].name;
-//        destinationVC.parentList = self.wordsLists[self.tableView.indexPathForSelectedRow.row];
+        NSLog(@"%@", self.wordsLists[self.tableView.indexPathForSelectedRow.row].name);
+        [destinationVC setParentList: self.wordsLists[self.tableView.indexPathForSelectedRow.row]];
+        NSLog(@"%@", destinationVC.parentList.name);
     }
         
 }
