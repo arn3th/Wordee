@@ -7,13 +7,13 @@
 //
 
 #import <Realm/Realm.h>
-//#import "WordsList.h"
 
 @interface Word: RLMObject
 
 @property NSString *basicLanguageText;
 @property NSString *learnedLanguageText;
-//@property RLMLinkingObjects *parentList;
+@property (readonly) RLMLinkingObjects *parentList;
+@property BOOL isLearned;
 @end
 
 

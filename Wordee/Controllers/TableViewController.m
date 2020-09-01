@@ -41,8 +41,11 @@
     [self.tableView addGestureRecognizer:lpgr];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [self.tableView reloadData];
+}
 
-/* TableViewDataSource Methods */
+#pragma mark - TableViewDataSource Methods
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.wordsLists.count;
 }
@@ -53,13 +56,13 @@
     WordsList *currentList = self.wordsLists[indexPath.row];
     
     cell.nameLabel.text = currentList.name;
-    cell.downLabel.text = @"0/0";
+    cell.downLabel.text = [self getProgressFor:currentList];
     cell.leftImageView.image = [UIImage imageNamed: currentList.basicLanguage];
     cell.rightImageView.image = [UIImage imageNamed: currentList.learnedLanguage];
     
     return cell;
 }
-/* TableViewDelegate Methods */
+#pragma mark - TableViewDelegate Methods
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -67,7 +70,7 @@
     
 }
 
-/* SearchBar Methods */
+#pragma mark - SearchBar Methods
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     self.wordsLists = [self.wordsLists objectsWithPredicate: [NSPredicate predicateWithFormat: @"name CONTAINS[cd] %@", searchBar.text]];
     [self.tableView reloadData];
@@ -87,7 +90,7 @@
     [searchBar resignFirstResponder];
 }
 
-/* Create, Read & Delete methods */
+#pragma mark - Create, Read & Delete Methods
 - (void)save:(WordsList *)wordsList
 {
     [self.realm transactionWithBlock:^{
@@ -109,16 +112,16 @@
     }];
 }
 
-//-(void) addWordsList{
-//        WordsList *wordsList = [[WordsList alloc] init];
-//        [wordsList setName: @"Test2 test2"];
-//        [wordsList setBasicLanguage: @"english"];
-//        [wordsList setLearnedLanguage:@"german"];
-//    [self save:wordsList];
-//}
+-(NSString*)getProgressFor:(WordsList*)list{
+    NSInteger size = list.words.count;
+    int i = 0;
+    for (Word* word in list.words) {
+        if(word.isLearned) i++;
+    }
+    return [NSString stringWithFormat:@"%d/%ld", i, (long)size];
+}
 
-
-/* LanguagesVC methods */
+#pragma mark - LanguagesVC Methods
 - (IBAction)addButtonPressed:(UIBarButtonItem *)sender {
     [self performSegueWithIdentifier: @"goToLanguages" sender: self];
     
@@ -131,10 +134,7 @@
         destonationVC.delegate = self;
     } else if([segue.identifier  isEqual: @"goToVocabulary"]) {
         VocabularyViewController *destinationVC = segue.destinationViewController;
-//        destinationVC.vocabularyListName = self.wordsLists[self.tableView.indexPathForSelectedRow.row].name;
-        NSLog(@"%@", self.wordsLists[self.tableView.indexPathForSelectedRow.row].name);
-        [destinationVC setParentList: self.wordsLists[self.tableView.indexPathForSelectedRow.row]];
-        NSLog(@"%@", destinationVC.parentList.name);
+        [destinationVC setParentVocabularyList: self.wordsLists[self.tableView.indexPathForSelectedRow.row]];
     }
         
 }
@@ -143,11 +143,10 @@
     [newList setName:name];
     [newList setBasicLanguage:basic];
     [newList setLearnedLanguage:learned];
-//    [newList setWords:];
     [self save:newList];
 }
 
-/* Long press selector method */
+#pragma mark - Long Press Selector Method
 -(void)handleLongPress:(UILongPressGestureRecognizer *)gestureRecognizer
 {
     CGPoint point = [gestureRecognizer locationInView:self.tableView];
@@ -170,4 +169,7 @@
         }
     }
 }
+
 @end
+
+

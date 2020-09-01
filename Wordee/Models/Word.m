@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "WordsList.h"
 #import "Word.h"
 
 @implementation Word
@@ -14,9 +15,9 @@
     return @[@"basicLanguageText", @"learnedLanguageText", @"parentList"];
 }
 
-//+ (NSDictionary *)linkingObjectsProperties {
-//    return @{
-//        @"parentList": [RLMPropertyDescriptor descriptorWithClass: WordsList.class propertyName:@"words"],
-//    };
-//}
++ (NSDictionary *)linkingObjectsProperties {
+    return @{
+        @"parentList": [RLMPropertyDescriptor descriptorWithClass: WordsList.class propertyName:@"words"],
+    };
+}
 @end

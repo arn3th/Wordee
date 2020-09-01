@@ -11,12 +11,13 @@
 #import "WordsList.h"
 #import <Realm/Realm.h>
 
-@interface VocabularyViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface VocabularyViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *startButton;
 @property (weak, nonatomic) IBOutlet UIButton *addNewButton;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) WordsList* parentList;
+@property (strong, nonatomic) WordsList* parentVocabularyList;
+@property (atomic, retain) RLMRealm *realm;
 
 
 @end
