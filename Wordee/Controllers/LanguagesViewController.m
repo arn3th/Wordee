@@ -16,18 +16,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.languagePickerTop.delegate = self;
-    self.languagePickerBottom.delegate = self;
+    self.highlightedTopImage = 0;
+    self.highlightedBottomImage = 0;
+
     
-    self.addButton.layer.cornerRadius = 10;
-    self.addButton.clipsToBounds = YES;
     
-    self.languages = [NSArray arrayWithObjects:@"english", @"french", @"german", @"italian", @"polish", @"portuguese" , @"russian" , @"spanish", @"ukrainian", nil];
+    for (NSArray *imagesArray in [[NSArray alloc] initWithObjects:self.topViewImages, self.bottomViewImages, nil]) {
+        for (UIImageView *imageView in imagesArray) {
+            imageView.layer.cornerRadius = 10;
+            imageView.clipsToBounds = YES;
+        }
+    }
+    
+    self.nextButton.layer.cornerRadius = 10;
+    self.nextButton.clipsToBounds = YES;
+    
+    self.languages = [NSArray arrayWithObjects:@"english", @"french", @"german", @"italian", @"polish", @"portuguese" , @"russian" , @"spanish", nil];
 }
 
+
 - (IBAction)doneButtonPressed:(id)sender {
-    NSString *topLang = self.languages[[self.languagePickerTop selectedRowInComponent:0]];
-    NSString *bottomLang = self.languages[[self.languagePickerBottom selectedRowInComponent:0]];
+    NSString *topLang = self.languages[self.highlightedTopImage];
+    NSString *bottomLang = self.languages[self.highlightedBottomImage];
     
     UIAlertController * alertController = [UIAlertController alertControllerWithTitle: @"Vocabulary List Name" message: nil preferredStyle:UIAlertControllerStyleAlert];
     [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
@@ -51,34 +61,32 @@
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
-#pragma mark - UIPickerViewDataSource Methods
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
-    return 1;
-}
 
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    return 9;
-}
-
-- (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component {
-    return 60;
-}
-
-
-#pragma mark - UIPickerViewDelegate Methods
-- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
+- (IBAction)topViewButtonPressed:(UIButton *)sender {
     
-    UIView *myView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, pickerView.bounds.size.width, 86)];
-    UIImageView *myImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, pickerView.bounds.size.width, 86)];
+    UIImageView *oldImageView = self.topViewImages[self.highlightedTopImage];
+    [oldImageView.layer setBorderWidth:0.0];
     
-    [myImageView setImage:[UIImage imageNamed: [NSString stringWithFormat:@"%@_svg.pdf", self.languages[row]]]];
-    [myImageView.layer setMasksToBounds:YES];
-    [myImageView.layer setCornerRadius: 25.0];
-    [myImageView setContentMode: UIViewContentModeRedraw];
+    NSUInteger i = [self.languages indexOfObject: sender.currentTitle];
+    UIImageView *imageView = self.topViewImages[i];
+    [imageView.layer setBorderWidth: 5.0];
+    [imageView.layer setBorderColor: [UIColor colorWithRed:0.023529 green:0.18431 blue:0.352941 alpha:1].CGColor];
     
-    [myView addSubview:myImageView];
-    return myView;
+    self.highlightedTopImage = (int)i;
 }
+
+- (IBAction)bottomViewButtonPressed:(UIButton *)sender {
+    UIImageView *oldImageView = self.bottomViewImages[self.highlightedBottomImage];
+    [oldImageView.layer setBorderWidth:0.0];
+    
+    NSUInteger i = [self.languages indexOfObject: sender.currentTitle];
+    UIImageView *imageView = self.bottomViewImages[i];
+    [imageView.layer setBorderWidth: 5.0];
+    [imageView.layer setBorderColor: [UIColor colorWithRed:0.023529 green:0.18431 blue:0.352941 alpha:1].CGColor];
+    
+    self.highlightedBottomImage = (int)i;
+}
+
 
 
 @end

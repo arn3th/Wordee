@@ -15,12 +15,16 @@
 @end
 
 
-@interface LanguagesViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
+@interface LanguagesViewController : UIViewController
 
 @property (weak, nonatomic) id <LanguagesViewControllerDelegate> delegate;
-@property (weak, nonatomic) IBOutlet UIPickerView *languagePickerBottom;
-@property (weak, nonatomic) IBOutlet UIPickerView *languagePickerTop;
-@property (weak, nonatomic) IBOutlet UIButton *addButton;
-@property (nonatomic, retain) NSArray *languages; 
+@property (weak, nonatomic) IBOutlet UIButton *nextButton;
+@property (nonatomic, retain) NSArray *languages;
+
+@property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *topViewImages;
+@property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *bottomViewImages;
+
+@property int highlightedTopImage;
+@property int highlightedBottomImage;
 
 @end

@@ -10,8 +10,9 @@
 #import "WordCell.h"
 #import "WordsList.h"
 #import <Realm/Realm.h>
+#import "AddViewController.h"
 
-@interface VocabularyViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate>
+@interface VocabularyViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate, AddViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *startButton;
 @property (weak, nonatomic) IBOutlet UIButton *addNewButton;

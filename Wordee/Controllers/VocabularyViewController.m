@@ -99,4 +99,25 @@
     }
 }
 
+- (IBAction)addNewButtonPressed:(UIButton *)sender {
+    [self performSegueWithIdentifier: @"goToAddNew" sender: self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if([segue.identifier  isEqual: @"goToAddNew"]) {
+        AddViewController *destonationVC = segue.destinationViewController;
+        destonationVC.delegate = self;
+        destonationVC.parentVocabularyList = self.parentVocabularyList;
+    }
+}
+
+- (void)didAddNewWord:(Word *)word {
+     [self.realm transactionWithBlock:^{
+        [self.parentVocabularyList.words addObject:word];
+    }];
+    
+    [self.tableView reloadData];
+}
+
 @end

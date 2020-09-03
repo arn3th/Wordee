@@ -65,8 +65,9 @@
 #pragma mark - TableViewDelegate Methods
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
     [self performSegueWithIdentifier: @"goToVocabulary" sender: self];
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     
 }
 
