@@ -1,4 +1,3 @@
 # Wordee
 
-
-Application for learning vocabulary.
+A vocabulary application written in Objective-C.
